@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2015 ACT Framework Sample Project
+  ~
+  ~ The ACTFramework Sample Project licenses this file to you under the Apache License,
+  ~ version 2.0 (the "License"); you may not use this file except in compliance
+  ~ with the License. You may obtain a copy of the License at:
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+  ~ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+  ~ License for the specific language governing permissions and limitations
+  ~ under the License.
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.actframework.demo</groupId>
+  <artifactId>helloworld</artifactId>
+  <version>1.8.1</version>
+
+  <name>actframework app demo - hello world</name>
+  <description>demonstrate a minimal hello world application for actframework</description>
+  <url>http://actframework.org/</url>
+
+  <parent>
+    <groupId>org.actframework</groupId>
+    <artifactId>act-starter-parent</artifactId>
+    <version>1.8.1.0</version>
+  </parent>
+
+  <properties>
+    <app.entry>demo.helloworld.HelloWorldApp</app.entry>
+    <act.version>1.8.1-SNAPSHOT</act.version>
+    <hutool.version>4.0.7</hutool.version>
+    <beetl.version>2.7.27</beetl.version>
+    <beetlsql.version>2.10.14</beetlsql.version>
+  </properties>
+
+  <build>
+    <finalName>${project.artifactId}-${project.version}-r${buildNumber}</finalName>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.actframework</groupId>
+      <artifactId>act</artifactId>
+      <version>${act.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>cn.hutool</groupId>
+      <artifactId>hutool-core</artifactId>
+      <version>${hutool.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.actframework</groupId>
+      <artifactId>act-beetlsql</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.actframework</groupId>
+      <artifactId>act-beetl</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>6.0.5</version>
+    </dependency>
+
+    <!--
+      <dependency>
+        <groupId>com.ibeetl</groupId>
+        <artifactId>beetl</artifactId>
+        <version>${beetl.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.ibeetl</groupId>
+        <artifactId>beetlsql</artifactId>
+        <version>${beetlsql.version}</version>
+      </dependency>
+      -->
+  </dependencies>
+</project>

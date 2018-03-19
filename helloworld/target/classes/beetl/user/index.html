@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>主键</td>
+        <td>用户名</td>
+        <td>密码</td>
+        <td>创建时间</td>
+    </tr>
+    </thead>
+    <tbody>
+<%
+for(user in userList){
+%>
+<tr>
+    <td>${user.id}</td>
+    <td>${user.tails.user_name}</td>
+    <td>${user.pwd}</td>
+    <td>${user.tails.create_date}</td>
+</tr>
+<%
+}
+%>
+    </tbody>
+</table>
+</body>
+</html>
